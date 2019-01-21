@@ -5,3 +5,4 @@ RUN apk update && apk add bash curl gcc g++ musl-dev python3-dev libffi-dev open
 ENV PIP_DEFAULT_TIMEOUT=1000
 RUN pip install poetry==0.12.11 gunicorn pycrypto ipython pandas ipdb mypy flask sqlalchemy redis \
 pyjwt flask-migrate flask-sqlalchemy pymysql requests graphene pytest jupyter  -i https://pypi.douban.com/simple
+RUN apk add git
