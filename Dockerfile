@@ -7,7 +7,6 @@ RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 RUN apt-get update && apt-get upgrade -y && apt-get install -y vim git gcc build-essential libffi-dev
 RUN pip install -U pip
 RUN pip install poetry==1.0.0 -i $PYPI
-RUN poetry config virtualenvs.create false --local
 RUN pip install cython numpy pandas -i $PYPI
 RUN pip install gunicorn pycrypto ipython ipdb mypy flask sqlalchemy django celery redis \
 pyjwt pymysql requests graphene pytest jupyter  -i $PYPI
